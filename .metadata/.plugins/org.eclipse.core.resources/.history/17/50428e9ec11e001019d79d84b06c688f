@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		
+
+		String s="Java is simple and Java is secure";
+		
+		String[] split = s.split(" ");
+		
+		List<String> list = new ArrayList<>();
+		for(String s1:split) {
+			list.add(s1);
+		}
+		
+		Map<String, Long> collect = list.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+		System.out.println(collect);
+		
+	 
+		
+		
+		
+		
+	}
+
+}
