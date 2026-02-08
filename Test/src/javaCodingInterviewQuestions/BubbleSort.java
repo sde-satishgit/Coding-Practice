@@ -8,7 +8,7 @@ public class BubbleSort {
 		
 		int arr1[] = bubbleSort(arr);
 		
-		System.out.println(arr1);
+		//System.out.println(arr1);
 		for(int r:arr1) {
 			System.out.println(r);
 		}
@@ -17,7 +17,7 @@ public class BubbleSort {
 	private static int[] bubbleSort(int[] arr) {
 		
 		int n = arr.length-1;
-		
+		System.out.println("n " + n);
 		while(n>=1) {
 		for(int i=0;i<n;i++) {
 			
