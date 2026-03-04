@@ -19,15 +19,15 @@ public class Arcelor_Mittal_Interview_Code {
 		map2.put("kun", 7765.0);
 
 		Map<String, Double> collect = map2.entrySet().stream()
-				.sorted(Map.Entry.<String, Double>comparingByValue().reversed())
+			.sorted(Map.Entry.<String, Double>comparingByValue().reversed())
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
 		
-		System.out.println(collect);
+		//System.out.println(collect);
 		
-		map1.forEach((key, value1) -> {
-		    Double value2 = map2.get(key);
+		collect.forEach((key, value1) -> {
+		    Integer value2 = map1.get(key);
 		    if (value2 != null) {
-		        System.out.println(value1 + "," + value2);
+		        System.out.println(value2 + "," + value1);
 		    }
 		});
 
